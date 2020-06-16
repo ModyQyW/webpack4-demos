@@ -1,0 +1,22 @@
+{
+  "name": "demo01",
+  "version": "1.0.0",
+  "description": "A demo for webpack 4.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && webpack"
+  },
+  "private": true,
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui7@mail3.sysu.edu.cn",
+    "url": "https://modyqyw.github.io"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^6.0.0",
+    "html-webpack-plugin": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.0.0"
+  }
+}
