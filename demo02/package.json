@@ -1,0 +1,33 @@
+{
+  "name": "demo02",
+  "version": "1.0.0",
+  "description": "A demo for webpack 4.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.js"
+  },
+  "private": true,
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui7@mail3.sysu.edu.cn",
+    "url": "https://modyqyw.github.io"
+  },
+  "devDependencies": {
+    "@babel/cli": "7",
+    "@babel/core": "7",
+    "@babel/plugin-transform-runtime": "7",
+    "@babel/preset-env": "7",
+    "babel-loader": "8",
+    "clean-webpack-plugin": "3",
+    "copy-webpack-plugin": "6",
+    "html-webpack-plugin": "4",
+    "webpack": "4",
+    "webpack-cli": "3",
+    "webpackbar": "4"
+  },
+  "dependencies": {
+    "@babel/runtime": "7",
+    "core-js": "3",
+    "regenerator-runtime": "0.11.1"
+  }
+}
