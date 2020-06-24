@@ -9,9 +9,9 @@ const WebpackBar = require('webpackbar');
 module.exports = {
   // mode
   mode: 'production',
-  // entry
+  // entry ${PROJECT_DIR}/src/index.js
   entry: path.resolve('src', 'index.js'),
-  // output
+  // output ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -22,11 +22,11 @@ module.exports = {
     new WebpackBar(),
     // clean output
     new CleanPlugin(),
-    // copy ./public/favicon.ico
+    // copy ${PROJECT_DIR}/public/favicon.ico
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
-    // use ./public/index.html as template
+    // use ${PROJECT_DIR}/public/index.html as template
     new HtmlPlugin({
       title: 'demo01',
       template: path.resolve('public', 'index.html'),
