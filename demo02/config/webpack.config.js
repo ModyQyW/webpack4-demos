@@ -36,12 +36,41 @@ module.exports = {
   module: {
     rules: [
       {
-        // js files
-        test: /\.js$/,
+        // js and jsx files
+        test: /\.jsx?$/,
+        // exclude node_modules and bower_components
+        exclude: /(node_modules|bower_components)/,
         // deal with babel-loader
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        // css files
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                modifyVars: {
+                  'primary-color': '#2f54eb',
+                },
+                javascriptEnabled: true,
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },

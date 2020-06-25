@@ -6,7 +6,16 @@
         "useBuiltIns": "usage",
         "corejs": { "version": 3, "proposals": true }
       }
-    ]
+    ],
+    "@babel/preset-react"
   ],
-  "plugins": [["@babel/plugin-transform-runtime"]]
+  "env": {
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]]
+    }
+  },
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    ["import", { "libraryName": "antd", "style": true }]
+  ]
 }
