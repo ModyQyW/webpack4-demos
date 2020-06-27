@@ -85,8 +85,12 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              // 10 MB max
-              limit: 10240,
+              // 8 MB max
+              limit: 8192,
+              // put into img folder
+              outputPath: 'img',
+              // specify img folder
+              publicPath: 'img',
             },
           },
         ],
@@ -95,14 +99,17 @@ module.exports = {
         // font files
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         // deal with url-loader
-        use: [{ loader: 'url-loader' }],
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: 'fonts',
+              publicPath: 'fonts',
+            },
+          },
+        ],
       },
-      {
-        // audio and video files
-        test: /\.(mp3|mp4|webp|webm|flv)$/,
-        // deal with url-loader
-        use: [{ loader: 'url-loader' }],
-      }
     ],
   },
 };
