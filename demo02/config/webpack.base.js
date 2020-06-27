@@ -8,9 +8,9 @@ const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-  // entry ${PROJECT_DIR}/src/index.js
+  // entry
   entry: path.resolve('src', 'index.js'),
-  // output ${PROJECT_DIR}/dist/index.js
+  // output
   output: {
     path: path.resolve('dist'),
     filename: 'index.js',
@@ -27,7 +27,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
-    // use ${PROJECT_DIR}/public/index.html as template
+    // use ${PROJECT_DIR}/public/index.html
     new HtmlPlugin({
       title: 'demo02',
       template: path.resolve('public', 'index.html'),

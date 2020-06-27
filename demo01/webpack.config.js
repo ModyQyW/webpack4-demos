@@ -10,14 +10,14 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 module.exports = {
   // mode
   mode: 'production',
-  // entry ${PROJECT_DIR}/src/index.js
+  // entry
   entry: path.resolve('src', 'index.js'),
-  // output ${PROJECT_DIR}/dist/bundle.js
+  // output
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
   },
-  // plugins
+  // plugin
   plugins: [
     // show friendly errors
     new FriendlyErrorsPlugin(),
@@ -29,7 +29,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
-    // use ${PROJECT_DIR}/public/index.html as template
+    // use ${PROJECT_DIR}/public/index.html
     new HtmlPlugin({
       title: 'demo01',
       template: path.resolve('public', 'index.html'),
