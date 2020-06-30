@@ -9,11 +9,13 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   // entry
-  entry: path.resolve('src', 'index.js'),
+  entry: {
+    app: path.resolve('src', 'index.js'),
+  },
   // output
   output: {
     path: path.resolve('dist'),
-    filename: 'index.js',
+    filename: '[name].js',
   },
   // plugins
   plugins: [

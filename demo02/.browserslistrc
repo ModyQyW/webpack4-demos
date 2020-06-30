@@ -1,5 +1,8 @@
 > 0.2%
-last 5 versions
+last 3 versions
 not dead
 chrome >= 70
+firefox >= 68
+edge >= 81
+safari >= 13
 ie >= 11
