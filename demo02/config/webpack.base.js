@@ -56,22 +56,7 @@ module.exports = {
         // less files
         test: /\.less$/,
         // deal with less-loader first, then css-loader, finally style-loader
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          {
-            loader: 'less-loader',
-            options: {
-              lessOptions: {
-                // customize theme
-                modifyVars: {
-                  'primary-color': '#2f54eb',
-                },
-                javascriptEnabled: true,
-              },
-            },
-          },
-        ],
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
       },
       {
         // sass/scss files

@@ -16,6 +16,14 @@
   },
   "plugins": [
     "@babel/plugin-transform-runtime",
-    ["import", { "libraryName": "antd", "style": true }]
+    [
+      "zent",
+      {
+        "libraryName": "zent",
+        "noModuleRewrite": false,
+        "automaticStyleImport": true,
+        "useRawStyle": true
+      }
+    ]
   ]
 }

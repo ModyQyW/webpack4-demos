@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'antd';
+import { Button } from 'zent';
 import iconWebpack from './assets/webpack.png';
-import './index.less';
+import './index.scss';
 
 const App = () => (
   <div className="container">
     <p>Hello Webpack!</p>
     <img src={iconWebpack} />
-    <Button type="primary">Hello Ant Design!</Button>
+    <Button type="primary">Hello Zent!</Button>
   </div>
 );
 
