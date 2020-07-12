@@ -78,5 +78,5 @@ module.exports = merge(baseConfig, {
       }),
     ],
   },
-  stats: 'minimal'
+  stats: 'minimal',
 });
