@@ -5,8 +5,7 @@ module.exports = merge(baseConfig, {
   mode: 'development',
   devServer: {
     hot: true,
-    open: true,
-    quiet: true,
+    noInfo: true,
   },
   devtool: 'eval-cheap-source-map',
   module: {
