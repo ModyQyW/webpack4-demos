@@ -1,8 +1,10 @@
 const path = require('path');
+const os = require('os');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(baseConfig, {
   mode: 'production',
@@ -62,4 +64,19 @@ module.exports = merge(baseConfig, {
       },
     ],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        parallel: os.cpus().length - 1,
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
+  },
+  stats: 'minimal'
 });
