@@ -53,16 +53,19 @@ module.exports = {
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
-        // less files
-        test: /\.less$/,
-        // deal with less-loader first, then css-loader, finally style-loader
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
-      },
-      {
         // sass/scss files
         test: /\.s[ac]ss$/,
         // deal with sass-loader first, then css-loader, finally style-loader
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'sass-loader' },
+        ],
       },
       {
         // image files
