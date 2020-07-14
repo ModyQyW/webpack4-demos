@@ -33,20 +33,13 @@ module.exports = merge(baseConfig, {
               publicPath: 'css',
             },
           },
-          { loader: 'css-loader' },
-        ],
-      },
-      {
-        test: /\.less$/,
-        use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'css-loader',
             options: {
-              publicPath: 'css',
+              importLoaders: 1,
             },
           },
-          { loader: 'css-loader' },
-          { loader: 'less-loader' },
+          { loader: 'postcss-loader' },
         ],
       },
       {
@@ -58,7 +51,13 @@ module.exports = merge(baseConfig, {
               publicPath: 'css',
             },
           },
-          { loader: 'css-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
           { loader: 'sass-loader' },
         ],
       },
