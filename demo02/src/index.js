@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'zent';
+import { Button, Icon } from 'zent';
 import iconWebpack from './assets/webpack.png';
 import './index.scss';
 
@@ -18,7 +18,10 @@ const App = () => {
     <div className="container">
       <p>Hello Webpack!</p>
       <img src={iconWebpack} />
-      <Button type="primary">Hello Zent!</Button>
+      <Button type="primary">
+        <Icon type="youzan" />
+        Hello Zent!
+      </Button>
     </div>
   );
 };
