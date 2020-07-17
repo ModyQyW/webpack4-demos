@@ -64,6 +64,7 @@ module.exports = {
               importLoaders: 1,
             },
           },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader' },
         ],
       },
