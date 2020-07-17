@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 
 module.exports = merge(baseConfig, {
@@ -34,6 +34,7 @@ module.exports = merge(baseConfig, {
             },
           },
           { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader' },
         ],
       },
