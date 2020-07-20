@@ -8,7 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  devtool: 'none',
+  devtool: 'cheap-source-map',
   output: {
     path: path.resolve('dist'),
     filename: '[name].[chunkhash:8].js',

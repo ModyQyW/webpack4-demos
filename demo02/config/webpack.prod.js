@@ -4,7 +4,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  devtool: 'none',
+  devtool: 'cheap-source-map',
   plugins: [
     // analyze bundle
     new BundleAnalyzerPlugin({
