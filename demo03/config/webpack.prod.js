@@ -11,7 +11,7 @@ module.exports = merge(baseConfig, {
   devtool: 'cheap-source-map',
   output: {
     path: path.resolve('dist'),
-    filename: '[name].[chunkhash:8].js',
+    filename: 'js/[name].[chunkhash:8].js',
   },
   plugins: [
     new BundleAnalyzerPlugin({
@@ -77,6 +77,29 @@ module.exports = merge(baseConfig, {
         extractComments: false,
       }),
     ],
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        zent: {
+          name: 'chunk-zent',
+          priority: 30,
+          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+        },
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 20,
+          chunks: 'initial',
+        },
+        components: {
+          name: 'chunk-components',
+          test: path.resolve('src', 'components'),
+          minChunks: 2,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   stats: 'minimal',
 });
