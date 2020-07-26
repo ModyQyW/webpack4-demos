@@ -3,9 +3,9 @@
 
 
 "@modyqyw/prettier-config@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@modyqyw/prettier-config/-/prettier-config-1.0.0.tgz#5b19b02d2380e7afa69d4ad934a26e4011d06393"
-  integrity sha512-tjweVH3cmGCtSVHHApizXnWXV+/kIOnAzMR7od5WjTRPmYH4WoBFnaoXeN68yNB2B01fyipCIuLfFi4b7OYAVw==
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@modyqyw/prettier-config/-/prettier-config-1.0.1.tgz#722e8823a6fc699da104c8be16f662940dab3fc5"
+  integrity sha512-P20ooD3fGT7bCEAUwjjBAhsWC2U2bw4bABtWtOxdNkyTPBfYbGq0pCxVngyGUDuU5086i9lrrJg+Ah0TvT+8Bw==
   dependencies:
     prettier "~2.0.0"
 
