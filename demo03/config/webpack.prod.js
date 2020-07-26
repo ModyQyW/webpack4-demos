@@ -98,13 +98,6 @@ module.exports = merge(baseConfig, {
           priority: 10,
           reuseExistingChunk: true,
         },
-        utils: {
-          name: 'chunk-utils',
-          test: path.resolve('src', 'utils'),
-          minChunks: 2,
-          priority: 10,
-          reuseExistingChunk: true,
-        },
       },
     },
   },
