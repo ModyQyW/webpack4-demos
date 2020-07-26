@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         // image files
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         // deal with url-loader
         use: [
           {
