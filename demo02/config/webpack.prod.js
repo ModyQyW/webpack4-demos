@@ -10,6 +10,7 @@ module.exports = merge(baseConfig, {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       defaultSizes: 'stat',
+      openAnalyzer: false,
     }),
   ],
 });

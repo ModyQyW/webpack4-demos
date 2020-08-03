@@ -17,6 +17,7 @@ module.exports = merge(baseConfig, {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       defaultSizes: 'stat',
+      openAnalyzer: false,
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
