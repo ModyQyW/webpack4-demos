@@ -6,6 +6,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -25,6 +26,10 @@ module.exports = {
     new ESLintPlugin({
       files: 'src',
       extensions: ['js', 'jsx', 'ts', 'tsx'],
+      fix: true,
+    }),
+    new StylelintPlugin({
+      files: 'src/**/*.scss',
       fix: true,
     }),
   ],

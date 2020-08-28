@@ -23,6 +23,7 @@
     "@commitlint/config-conventional": "9",
     "@modyqyw/eslint-config-react": "1",
     "@modyqyw/prettier-config": "1",
+    "@modyqyw/stylelint-config-scss": "1",
     "@types/react": "16",
     "@types/react-dom": "16",
     "autoprefixer": "9",
