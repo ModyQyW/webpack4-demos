@@ -13,6 +13,14 @@
     "email": "wurui7@mail3.sysu.edu.cn",
     "url": "https://modyqyw.github.io"
   },
+  "dependencies": {
+    "@babel/runtime": "7",
+    "core-js": "3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "regenerator-runtime": "0.11.1",
+    "zent": "8"
+  },
   "devDependencies": {
     "@babel/cli": "7",
     "@babel/core": "7",
@@ -64,12 +72,25 @@
     "webpack-merge": "5",
     "webpackbar": "4"
   },
-  "dependencies": {
-    "@babel/runtime": "7",
-    "core-js": "3",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "regenerator-runtime": "0.11.1",
-    "zent": "8"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.scss": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "./src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
