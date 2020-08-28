@@ -1,12 +1,11 @@
 const path = require('path');
 const os = require('os');
 const { merge } = require('webpack-merge');
-const baseConfig = require('./webpack.base.js');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const baseConfig = require('./webpack.base.js');
 
 module.exports = merge(baseConfig, {
   mode: 'production',

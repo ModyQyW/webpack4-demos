@@ -6,18 +6,15 @@ import './index.scss';
 
 const App = () => {
   useEffect(() => {
-    new Promise((resolve) => {
-      setTimeout(() => {
-        document.title = 'Hello World!';
-        resolve();
-      }, 5000);
-    });
+    setTimeout(() => {
+      document.title = 'Hello World!';
+    }, 5000);
   }, []);
 
   return (
     <div className="container">
       <p>Hello Webpack!</p>
-      <img src={iconWebpack} />
+      <img src={iconWebpack} alt="icon-webpack" />
       <Button type="primary">
         <Icon type="youzan" />
         Hello Zent!

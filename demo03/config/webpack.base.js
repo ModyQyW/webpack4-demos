@@ -1,9 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -19,6 +21,11 @@ module.exports = {
     new HtmlPlugin({
       title: 'demo03',
       template: path.resolve('public', 'index.html'),
+    }),
+    new ESLintPlugin({
+      files: 'src',
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
+      fix: true,
     }),
   ],
   module: {
