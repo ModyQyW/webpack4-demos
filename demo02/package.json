@@ -4,7 +4,7 @@
   "description": "A demo for webpack 4.",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js --progress",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js"
   },
   "private": true,
@@ -38,8 +38,7 @@
     "webpack": "4",
     "webpack-cli": "3",
     "webpack-dev-server": "3",
-    "webpack-merge": "5",
-    "webpackbar": "4"
+    "webpack-merge": "5"
   },
   "dependencies": {
     "@babel/runtime": "7",

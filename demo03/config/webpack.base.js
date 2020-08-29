@@ -3,7 +3,6 @@ const path = require('path');
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
-const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
@@ -14,7 +13,6 @@ module.exports = {
   },
   plugins: [
     new FriendlyErrorsPlugin(),
-    new WebpackBar(),
     new CleanPlugin(),
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
