@@ -6,9 +6,10 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const baseConfig = require('./webpack.base.js');
 
-module.exports = merge(baseConfig, {
+module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
   mode: 'production',
   devtool: 'cheap-source-map',
   output: {
@@ -108,4 +109,4 @@ module.exports = merge(baseConfig, {
     },
   },
   stats: 'minimal',
-});
+}));
