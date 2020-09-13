@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@modyqyw/prettier-config@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@modyqyw/prettier-config/-/prettier-config-1.0.1.tgz#722e8823a6fc699da104c8be16f662940dab3fc5"
-  integrity sha512-P20ooD3fGT7bCEAUwjjBAhsWC2U2bw4bABtWtOxdNkyTPBfYbGq0pCxVngyGUDuU5086i9lrrJg+Ah0TvT+8Bw==
+"@modyqyw/prettier-config@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/@modyqyw/prettier-config/-/prettier-config-1.1.2.tgz#0ae030addecd6ac6a54c478b1530deabbf2e4cc9"
+  integrity sha512-KEdd9qsJD8o4OoFWDwVNNswvuQ+IFSThhyQJQSBTg5Kie1oIC8V8gC9h0cg0XnKxK+fB6WOVjnleCGx6BPEYrQ==
   dependencies:
-    prettier "~2.0.0"
+    prettier "~2.1.0"
 
-prettier@^2.0.5, prettier@~2.0.0:
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
-  integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
+prettier@^2.1.1, prettier@~2.1.0:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.1.1.tgz#d9485dd5e499daa6cb547023b87a6cf51bee37d6"
+  integrity sha512-9bY+5ZWCfqj3ghYBLxApy2zf6m+NJo5GzmLTpr9FsApsfjriNnS2dahWReHMi7qNPhhHl9SYHJs2cHZLgexNIw==
