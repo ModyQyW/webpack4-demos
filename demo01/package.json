@@ -1,6 +1,6 @@
 {
   "name": "demo01",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A demo for webpack 4.",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,7 @@
     "copy-webpack-plugin": "~6.1.0",
     "friendly-errors-webpack-plugin": "~1.7.0",
     "html-webpack-plugin": "~4.5.0",
-    "webpack": "~4.44.0",
-    "webpack-cli": "~3.3.0",
-    "webpack-merge": "~5.1.0"
+    "webpack": "~4.44.2",
+    "webpack-cli": "~4.2.0"
   }
 }
