@@ -4,7 +4,6 @@ const path = require('path');
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
-const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -21,8 +20,6 @@ module.exports = {
   plugins: [
     // show friendly errors
     new FriendlyErrorsPlugin(),
-    // show bar
-    new WebpackBar(),
     // clean output
     new CleanPlugin(),
     // copy ${PROJECT_DIR}/public/favicon.ico
