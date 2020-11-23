@@ -1,7 +1,0 @@
-{
-  "prettier": "@modyqyw/prettier-config",
-  "devDependencies": {
-    "@modyqyw/prettier-config": "^1.1.2",
-    "prettier": "^2.1.1"
-  }
-}
