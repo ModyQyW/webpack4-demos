@@ -1,0 +1,12 @@
+{
+  "name": "webpack4-demos",
+  "version": "0.0.0",
+  "description": "Demos for webpack4.",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@modyqyw/fabric": "~1.1.0",
+    "prettier": "~2.2.0"
+  },
+  "prettier": "@modyqyw/fabric/prettier"
+}
