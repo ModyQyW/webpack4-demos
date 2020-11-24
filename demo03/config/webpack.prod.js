@@ -11,7 +11,7 @@ const baseConfig = require('./webpack.base.js');
 
 module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
   mode: 'production',
-  devtool: 'cheap-source-map',
+  devtool: 'source-map',
   output: {
     path: path.resolve('dist'),
     filename: 'js/[name].[chunkhash:8].js',
