@@ -1,5 +1,6 @@
-/* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
+const config = require('@modyqyw/fabric/prettier');
+
 module.exports = {
-  ...require('@modyqyw/prettier-config'),
+  ...config,
 };
