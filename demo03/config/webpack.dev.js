@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const baseConfig = require('./webpack.base.js');
 
-module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
+module.exports = merge(baseConfig, {
   mode: 'development',
   devServer: {
     hot: true,
@@ -42,4 +42,4 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
       },
     ],
   },
-}));
+});
