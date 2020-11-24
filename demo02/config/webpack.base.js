@@ -100,4 +100,9 @@ module.exports = {
       },
     ],
   },
+  // resolve
+  resolve: {
+    // no need to write .js, .jsx, .ts and .tsx
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
 };
