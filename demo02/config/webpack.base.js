@@ -38,8 +38,8 @@ module.exports = {
       {
         // js and jsx files
         test: /\.jsx?$/,
-        // exclude node_modules and bower_components
-        exclude: /(node_modules|bower_components)/,
+        // exclude node_modules
+        exclude: /node_modules/,
         // deal with babel-loader
         use: [{ loader: 'babel-loader' }],
       },
