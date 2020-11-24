@@ -36,10 +36,10 @@ module.exports = {
   module: {
     rules: [
       {
-        // js and jsx files
+        // used js and jsx files
         test: /\.jsx?$/,
-        // exclude node_modules
-        exclude: /node_modules/,
+        // include src
+        include: /src/,
         // deal with babel-loader
         use: [{ loader: 'babel-loader' }],
       },
