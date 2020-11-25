@@ -36,7 +36,7 @@ module.exports = {
   module: {
     rules: [
       {
-        // used js and jsx files
+        // js/jsx files
         test: /\.jsx?$/,
         // include src
         include: /src/,
@@ -46,13 +46,7 @@ module.exports = {
       {
         // css files
         test: /\.css$/,
-        // deal with css-loader first, then style-loader
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-      },
-      {
-        // sass/scss files
-        test: /\.s[ac]ss$/,
-        // deal with sass-loader first, then css-loader, finally style-loader
+        // deal with postcss-loader, css-loader, style-loader
         use: [
           { loader: 'style-loader' },
           {
@@ -61,6 +55,23 @@ module.exports = {
               importLoaders: 1,
             },
           },
+          { loader: 'postcss-loader' },
+        ],
+      },
+      {
+        // sass/scss files
+        test: /\.s[ac]ss$/,
+        // deal with sass-loader, resolve-url-loader, postcss-loader,
+        //           css-loader, style-loader
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
           { loader: 'resolve-url-loader' },
           { loader: 'sass-loader' },
         ],
@@ -73,8 +84,8 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              // 8 MB max
-              limit: 8192,
+              // 2 MB max
+              limit: 2097152,
               // put into img folder
               outputPath: 'img',
               // specify img folder
@@ -91,7 +102,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 2097152,
               outputPath: 'fonts',
               publicPath: 'fonts',
             },

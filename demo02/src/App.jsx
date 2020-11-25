@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <Grid id="app">
+    <Grid>
       <Row>
         <Col span={24}>
           <img className="icon" src={iconWebpack} />
