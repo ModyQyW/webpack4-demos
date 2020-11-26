@@ -1,7 +1,4 @@
-const { merge } = require('webpack-merge');
-const baseConfig = require('./webpack.base.js');
-
-module.exports = merge(baseConfig, {
+module.exports = {
   mode: 'production',
   devtool: 'source-map',
-});
+};
