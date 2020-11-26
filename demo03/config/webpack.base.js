@@ -39,12 +39,12 @@ module.exports = {
         use: [{ loader: 'babel-loader' }],
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|git|webp)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 2097152,
               outputPath: 'img',
               publicPath: 'img',
               name: '[name].[contenthash:8].[ext]',
@@ -58,7 +58,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 2097152,
               outputPath: 'fonts',
               publicPath: 'fonts',
               name: '[name].[contenthash:8].[ext]',

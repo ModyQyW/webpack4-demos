@@ -1,15 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
-const os = require('os');
-const { merge } = require('webpack-merge');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
-const baseConfig = require('./webpack.base.js');
 
-module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
+module.exports = {
   mode: 'production',
   devtool: 'source-map',
   output: {
@@ -75,7 +71,6 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        parallel: os.cpus().length - 1,
         terserOptions: {
           output: {
             comments: false,
@@ -90,11 +85,11 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
         zent: {
           name: 'chunk-zent',
           priority: 30,
-          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+          test: /[/\\]node_modules[/\\]_?zent(.*)/,
         },
         vendors: {
           name: 'chunk-vendors',
-          test: /[\\/]node_modules[\\/]/,
+          test: /[/\\]node_modules[/\\]/,
           priority: 20,
           chunks: 'initial',
         },
@@ -109,4 +104,4 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
     },
   },
   stats: 'minimal',
-}));
+};
