@@ -13,38 +13,17 @@ module.exports = (env, argv) => {
 
   const envConfig = {};
   let tmpEnvConfig = {};
-  let envFilePath = path.resolve('.env');
-  if (fs.existsSync(envFilePath)) {
-    tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
-    const keys = Object.keys(tmpEnvConfig);
-    keys.forEach((k) => {
-      envConfig[k] = tmpEnvConfig[k];
-    });
-  }
-  envFilePath = path.resolve('.env.local');
-  if (fs.existsSync(envFilePath)) {
-    tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
-    const keys = Object.keys(tmpEnvConfig);
-    keys.forEach((k) => {
-      envConfig[k] = tmpEnvConfig[k];
-    });
-  }
-  envFilePath = path.resolve(`.env.${mode}`);
-  if (fs.existsSync(envFilePath)) {
-    tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
-    const keys = Object.keys(tmpEnvConfig);
-    keys.forEach((k) => {
-      envConfig[k] = tmpEnvConfig[k];
-    });
-  }
-  envFilePath = path.resolve(`.env.${mode}.local`);
-  if (fs.existsSync(envFilePath)) {
-    tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
-    const keys = Object.keys(tmpEnvConfig);
-    keys.forEach((k) => {
-      envConfig[k] = tmpEnvConfig[k];
-    });
-  }
+  const envFiles = ['.env', '.env.local', `.env.${mode}`, `.env.${mode}.local`];
+  envFiles.forEach((envFile) => {
+    const envFilePath = path.resolve(envFile);
+    if (fs.existsSync(envFilePath)) {
+      tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
+      const keys = Object.keys(tmpEnvConfig);
+      keys.forEach((k) => {
+        envConfig[k] = tmpEnvConfig[k];
+      });
+    }
+  });
   envConfig.NODE_ENV = envConfig.NODE_ENV || 'production';
 
   const definePluginOptions = {};
