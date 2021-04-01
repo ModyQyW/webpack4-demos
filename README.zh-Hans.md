@@ -4,4 +4,4 @@
 
 这是一个展示 webpack4 简单用法的仓库。
 
-[对应的教程地址](https://modyqyw.github.io/front-end/webpack4/)
+[对应的教程地址](https://modyqyw.github.io/frontend/webpack4/)
