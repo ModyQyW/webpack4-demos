@@ -9,7 +9,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.resolve('src', 'index.js'),
+    app: path.resolve('src', 'index.tsx'),
   },
   plugins: [
     new FriendlyErrorsPlugin(),
@@ -34,7 +34,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(j|t)sx?$/,
         include: /src/,
         use: [{ loader: 'babel-loader' }],
       },

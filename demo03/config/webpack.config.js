@@ -4,9 +4,9 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const webpack = require('webpack');
-const baseConfig = require('./webpack.base.js');
-const devConfig = require('./webpack.dev.js');
-const prodConfig = require('./webpack.prod.js');
+const baseConfig = require('./webpack.base');
+const devConfig = require('./webpack.dev');
+const prodConfig = require('./webpack.prod');
 
 module.exports = (env, argv) => {
   const mode = argv.mode || 'production';
