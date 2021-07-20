@@ -4,8 +4,8 @@
   "description": "Demos for webpack4.",
   "private": true,
   "devDependencies": {
-    "@modyqyw/fabric": "~1.25.2",
-    "prettier": "~2.2.1"
+    "@modyqyw/fabric": "~2.7.0",
+    "prettier": "~2.3.2"
   },
   "prettier": "@modyqyw/fabric/prettier"
 }
