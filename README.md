@@ -1,4 +1,4 @@
-# webpack4-demos
+# webpack4-plus-demos
 
 English | [简体中文](./README.zh-Hans.md)
 
